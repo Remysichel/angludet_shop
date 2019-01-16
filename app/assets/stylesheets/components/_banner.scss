@@ -1,0 +1,10 @@
+.banner {
+  color: darkgrey;
+  text-align: center;
+  height: calc(100vh - 66px);
+  background-size: cover !important;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
