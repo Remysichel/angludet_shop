@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="text-center">Les vins</h1>
+  <div class="row">
+    <% @wines.each do |wine| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <h3><%= link_to wine.name, wine_path(wine) %></h3>
+          <%= link_to image_tag(wine.photo_url, width: '200px'), wine_path(wine) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
