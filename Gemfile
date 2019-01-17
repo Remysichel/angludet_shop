@@ -10,6 +10,7 @@ gem 'rails', '5.2.1'
 gem 'redis'
 
 gem 'money-rails'
+gem 'stripe'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.5.0'

@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Toutes mes commandes</h1>
+  <% @orders.each do |order| %>
+    <div class="message">
+      <div class="message-name">
+        <h3><%= order.wine_sku %></h3>
+        <p><%= order.created_at %></p>
+      </div>
+      <div class="message-body">
+        <p><strong>Une bonne bouteille d'Angludet</strong></p>
+        <p>
+          La bouteille qui vous redonnera le sourir!
+        </p>
+      </div>
+      <div class="message-status">
+        <% if order.state == "pending" %>
+          <p class="status pending">Pending</p>
+        <% elsif order.state == "paid" %>
+          <p class="status accepted">Paid</p>
+        <% else %>
+          <p class="status declined">Declined</p>
+        <% end %>
+        <p class="price"><%= humanized_money_with_symbol(order.amount_cents * 10) %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
